@@ -73,3 +73,25 @@ function updateNumber (element, number) {
 }
 
 setInterval(updateTime, 100)
+
+
+
+window.onload = function() {
+    let elements = document.getElementsByClassName("fade-in");
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].style.opacity = 0;
+    }
+    let tick = function() {
+      for (let i = 0; i < elements.length; i++) {
+        let element = elements[i];
+        let opacity = element.style.opacity;
+        if (opacity < 1) {
+          element.style.opacity = opacity + 0.01;
+        }
+      }
+      if (elements.length > 0) {
+        window.requestAnimationFrame(tick);
+      }
+    };
+    tick();
+  }
