@@ -15,7 +15,6 @@ Welcome to my portfolio website! This website showcases my work, skills, and exp
 - HTML
 - CSS
 - JavaScript
-- Bootstrap
 
 ## Installation
 
